@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Raleway:wght@500&family=Roboto:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*style for heading*/
+.container{
+    max-width:1200px ;
+}
+.heading-menu{
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 30px;
+}
+.left-heading{
+    flex:1;
+}
+.right-menu{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    padding: 5px;
+    
+}
+.right-menu a{
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+}
+/*style for main section*/
+.main-content{
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 30px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-part{
+    flex: 1;
+}
+.left-part h1{
+    font-weight: bold;
+    font-size: 35px;
+}
+.left-part p{
+    margin: 25px 0;
+}
+.link-1{
+    text-decoration: none;
+    background-color: rgb(230, 9, 130);
+    padding: 10px 30px;
+    color: white;
+    border-radius: 25px;
+}
+span{
+    margin-left: 10px;
+}
+.right-part{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right-part img{
+    width: 350px;
+    height: 350px;
+}
+
+/*style for gallery section*/
+ 
+.title{
+   margin: 50px;
+   text-align: center;
+}
+.gallery{
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 20px;
+    grid-column-gap: 18px;
+}
+.products{
+    box-shadow: 10px 10px 40px gray;
+    width: 300px;
+    height:410px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.products img{
+    width: 100%;
+}
+.star{
+    display: flex;
+}
+.star i{color: goldenrod;
+}
+.link-2{
+}
+
+   
+/*style for optional*/
+.optional{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.optional h1{
+text-align: center;
+margin: 10px;
+}
+.animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.middle{
+    background-color:rgba(255, 235, 205, 0.89);
+    width: 300px;
+    padding:30px;
+  
+}
+
+.middle li{
+    list-style-type: none;
+    margin: 50px 0;
+    text-transform: uppercase;
+    font-weight:bold;
+    position: relative;
+    }
+
+.middle li::before{
+    content:'';
+    position: absolute;
+    background-color:rgb(133, 120, 120);
+    width:100%;
+    height:15px;
+    top:calc(100% + 5px);
+    left:0;
+    border-radius: 1000px; 
+ }
+
+        
+.middle li::after{
+    content:'';
+    position: absolute;
+    background-color:rgb(53, 48, 48);
+    width:0;
+    height:15px;
+    top:calc(100% + 5px);
+    left:0;
+    border-radius: 1000px;
+    animation-duration: 2s;
+    animation-delay: 0.1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    }
+
+
+.middle .main::after{
+    animation-name: drone;
+}
+
+@keyframes drone{
+to {width: 95%;
+    background-color: orange;}
+}
+
+.middle .main2::after{animation-name: camera;}
+
+@keyframes camera{
+to {width: 79%;
+    background-color: rgb(27, 165, 34);}
+}
+
+.middle .main3::after{animation-name: micro;}
+
+@keyframes micro{
+to{width: 69%;
+background-color: yellow;}
+}
+
+
+.middle .main4::after{animation-name: tripod;}
+
+@keyframes tripod{
+to{width: 49%;
+background-color: rgb(28, 150, 144);}
+}
+
+
+
+
+
+/*style for footer*/
+footer{
+    width: 100%;
+    background-color:rgb(4, 4, 29);
+    color:white;
+    text-align: center;
+    padding: 30px;
+    font-size: 15px;
+}
+.footer-link a{
+    margin-left: 15px;
+    color: white;
+    font-size: 30px;
+}
+/*style for mobile responsive*/
+@media screen and (max-width:600px){
+    .heading-menu{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .left-heading{
+        text-align: center;
+    }
+    .right-menu{
+        display: none;
+    }
+    .main-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .gallery{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+      
+    }
+}
+/*style for tab responsive*/
+@media  screen and (max-width:768px) {
+    .right-menu a{
+         margin-left: 10px;
+         font-size: 14px;
+    }
+    .gallery{
+        width: 100%;
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+   
+   
+}
+
