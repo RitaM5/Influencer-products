@@ -11,6 +11,7 @@ body{
 /*style for heading*/
 .container{
     max-width:1200px ;
+    margin: 0 auto;
 }
 .heading-menu{
     max-width: 80%;
@@ -91,8 +92,8 @@ span{
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-row-gap: 20px;
-    grid-column-gap: 18px;
+    grid-gap: 15px 15px;
+   
 }
 .products{
     box-shadow: 10px 10px 40px gray;
@@ -110,6 +111,10 @@ span{
 .star i{color: goldenrod;
 }
 .link-2{
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
 }
 
    
@@ -119,8 +124,8 @@ span{
     margin: 0 auto;
 }
 .optional h1{
-text-align: center;
-margin: 10px;
+   text-align: center;
+   margin: 10px;
 }
 .animation{
     display: flex;
