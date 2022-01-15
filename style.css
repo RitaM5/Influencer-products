@@ -115,6 +115,13 @@ span{
     margin: 0 auto;
     display: flex;
     justify-content: end;
+    margin-top:15px;
+  
+
+}
+.link-2 a{
+    text-decoration: none;
+    color: rgb(230, 9, 130);
 }
 
    
